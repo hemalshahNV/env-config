@@ -1,0 +1,41 @@
+[legacy/profiles:/:34bbc1ed-da45-45fa-ac2d-898089eb9059]
+foreground-color='rgb(0,255,0)'
+visible-name='Screen0'
+custom-command='tmux new-session -A -s screen0'
+use-system-font=false
+use-custom-command=true
+use-theme-colors=false
+font='Monospace 14'
+scrollback-unlimited=true
+background-color='rgb(0,0,0)'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+visible-name='Default'
+
+[legacy/profiles:/:9906b07f-448c-4506-b15c-f089575391d5]
+foreground-color='rgb(0,255,0)'
+visible-name='Screen1'
+custom-command='tmux new-session -A -s screen1'
+use-system-font=false
+use-custom-command=true
+use-theme-colors=false
+font='Monospace 14'
+scrollback-unlimited=true
+background-color='rgb(0,0,0)'
+
+[legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '34bbc1ed-da45-45fa-ac2d-898089eb9059', '9906b07f-448c-4506-b15c-f089575391d5', '0699988d-3a4c-4503-9804-a080e5ac4837']
+
+[legacy/profiles:/:0699988d-3a4c-4503-9804-a080e5ac4837]
+foreground-color='rgb(0,255,0)'
+visible-name='Screen2'
+custom-command='tmux new-session -A -s screen2'
+use-system-font=false
+use-custom-command=true
+use-theme-colors=false
+font='Monospace 14'
+scrollback-unlimited=true
+background-color='rgb(0,0,0)'
+
+[legacy]
+schema-version=uint32 3
