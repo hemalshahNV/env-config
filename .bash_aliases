@@ -12,9 +12,12 @@ alias gst='git status'
 alias gl='git log'
 alias gbc='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
+# Convenience aliases
+alias o="xdg-open" # o stands for open
+
 export TERM=xterm-256color
 export EDITOR=vim
-export DISPLAY=:0
+export DISPLAY=:1
 
 gg() { git grep "$1"; }
 hgr() { history | grep "$1"; }
