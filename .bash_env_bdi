@@ -1,0 +1,7 @@
+export PATH=$PATH:$HOME/bin
+export BDI=/bdi
+export BDI_ENABLE_COLORGCC=false
+export PATH=$PATH:$BDI/rt/scripts
+export PYTHONPATH=$BDI/rt/python
+export PATH=$PATH:/opt/puppetlabs/bin
+export PATH=$PATH:$BDI/rt/build/tools/linux

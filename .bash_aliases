@@ -25,4 +25,12 @@ hgr() { history | grep "$1"; }
 # Show current Git branch on bash prompt
 PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
 
+# Environment-specific overrides.
+BASH_ENVS=~/.bash_env_*
+for f in $BASH_ENVS; do
+  if [ -f "$f" ]; then
+    . "$f"
+  fi
+done
+
 
