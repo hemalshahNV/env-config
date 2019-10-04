@@ -1,7 +1,31 @@
-export PATH=$PATH:$HOME/bin
+
 export BDI=/bdi
 export BDI_ENABLE_COLORGCC=false
-export PATH=$PATH:$BDI/rt/scripts
+
 export PYTHONPATH=$BDI/rt/python
+
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$BDI/rt/scripts
 export PATH=$PATH:/opt/puppetlabs/bin
 export PATH=$PATH:$BDI/rt/build/tools/linux
+
+export OS=Linux
+export BDI_OS=linux
+export CCACHE_DIR=$BDI/.ccache
+
+export ROBOT=dasani
+
+alias db='$BDI/rt/scripts/run_linux_db.sh'
+alias bosplot='python -m bdi.plot'
+alias rgui='python -m bdi.robots.atlas4.rgui --manual-perception-logging'
+alias hgui='python -m bdi.robots.handle.gui --auto-log-manip'
+alias viz='python $BDI/rt/python/bdi/autonomy/visualizer/visualizer.py --robot=$ROBOT'
+alias bn='(cd $BDI; build linux rt/sim/nextgen/gtest)'
+alias bh='(cd $BDI; build linux rt/robots/handle)'
+alias bs='(cd $BDI; build linux rt/sim/spot2/gtest)'
+alias nt='GTEST_FILTER=*:-*Render*:*RunTwiceTest.Walk*:*RunTwiceTest.DB* ~/bdi/rt/sim/nextgen/gtest/run_gtests.sh 50'
+
+alias cdbdstatus='cd /work/presentations/internal/meetings/2019'
+alias bdvpnup='(globalprotect connect)'
+alias bdvpndown='(globalprotect disconnect)'
+
