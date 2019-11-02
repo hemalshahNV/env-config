@@ -23,6 +23,13 @@ gg() { git grep "$1"; }
 hgr() { history | grep "$1"; }
 
 # Show current Git branch on bash prompt
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+WHITE=$(tput setaf 7)
+RESET=$(tput setaf 0)
 PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
 
 # Environment-specific overrides.
