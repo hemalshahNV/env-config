@@ -24,7 +24,12 @@ hgr() { history | grep "$1"; }
 
 # Show current Git branch on bash prompt
 # Requires git bash completion to be setup.
-# curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+if [ ! -f ~/.git-prompt.sh ]; then
+    curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+fi
+
+source ~/.git-prompt.sh
 
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
