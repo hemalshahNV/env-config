@@ -27,6 +27,6 @@ alias bs='(cd $BDI; build linux rt/sim/spot2/gtest)'
 alias nt='GTEST_FILTER=*:-*Render*:*RunTwiceTest.Walk*:*RunTwiceTest.DB* ~/bdi/rt/sim/nextgen/gtest/run_gtests.sh 50'
 
 alias cdbdstatus='cd /work/presentations/internal/meetings/2020'
-alias bdvpnup='(globalprotect connect)'
+alias bdvpnup='(globalprotect connect --portal saturn.bostondynamics.com)'
 alias bdvpndown='(globalprotect disconnect)'
 
