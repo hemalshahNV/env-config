@@ -44,7 +44,7 @@ PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\
 BASH_ENVS=~/.bash_env_*
 for f in $BASH_ENVS; do
   if [ -f "$f" ]; then
-    . "$f"
+    source "$f"
   fi
 done
 
