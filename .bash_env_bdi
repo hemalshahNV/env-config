@@ -27,6 +27,14 @@ alias bs='(cd $BDI; build linux rt/sim/spot2/gtest)'
 alias nt='GTEST_FILTER=*:-*Render*:*RunTwiceTest.Walk*:*RunTwiceTest.DB* ~/bdi/rt/sim/nextgen/gtest/run_gtests.sh 50'
 
 alias cdbdstatus='cd /work/presentations/internal/meetings/2020'
-alias bdvpnup='(globalprotect connect --portal saturn.bostondynamics.com)'
+
+read -r -d '' BDVPNUP_CMD << EOF
+globalprotect connect --portal saturn.bostondynamics.com ;
+echo "Waiting for routes to get generated..." &&
+while [[ $(route -n | awk '/gpd0/{print $2}' | head -1) == "" ]]; do sleep 1; done &&
+sudo route del default dev gpd0 && sudo route add -net 10.0.0.0/8 gw $(route -n | awk '/gpd0/{print $2}' | head -1) dev gpd0
+EOF
+
+alias bdvpnup=$BDVPNUP_CMD
 alias bdvpndown='(globalprotect disconnect)'
 
