@@ -35,6 +35,25 @@ while [[ -z $(route -n | awk '/gpd0/{print $2}' | head -1) ]]; do sleep 1; done 
 sudo route del default dev gpd0 && sudo route add -net 10.0.0.0/8 gw $(route -n | awk '/gpd0/{print $2}' | head -1) dev gpd0
 EOF
 
-alias bdvpnup=$BDVPNUP_CMD
+alias bdvpnup='(globalprotect connect --portal saturn.bostondynamics.com)'
 alias bdvpndown='(globalprotect disconnect)'
 
+
+rsync_team_slides() {
+	TEAM_LDAPS=(agosset ajose amoriarty cbills chance csaint elorenzo hshah jjelinek jselvakumar tkichkaylo)
+
+	DATE=$1
+	if [[ -z "$DATE" ]] ; then
+		DATE=`date -dmonday +%Y%m%d`
+	fi
+	echo "Syncing team slides for $DATE to ~/Desktop/fleet-status/$DATE"
+
+	INCLUDE_FILES=()
+	for i in "${TEAM_LDAPS[@]}" ; do INCLUDE_FILES+=(--include="*_$i.pptx") ; done
+ 
+	rsync -avrz "${INCLUDE_FILES[@]}" --exclude="*" /work/presentations/internal/meetings/2020/$DATE/ ~/Desktop/fleet-status/$DATE
+}
+
+rsync_last_team_slides() {
+	rsync_team_slides `date -dlast-monday +%Y%m%d`
+}
