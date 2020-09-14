@@ -40,7 +40,7 @@ alias bdvpndown='(globalprotect disconnect)'
 
 
 rsync_team_slides() {
-	TEAM_LDAPS=(agosset ajose amoriarty cbills chance csaint elorenzo hshah jjelinek jselvakumar tkichkaylo)
+	TEAM_LDAPS=(agosset ajose amoriarty bhollaway cbills chance csaint elorenzo hshah jjelinek jselvakumar jselv tkichkaylo)
 
 	DATE=$1
 	if [[ -z "$DATE" ]] ; then

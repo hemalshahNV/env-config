@@ -11,6 +11,7 @@ alias gp='git pull'
 alias gst='git status'
 alias gl='git log'
 alias gbc='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias glg='git log --graph --decorate --pretty=oneline --abbrev-commit'
 
 # Convenience aliases
 alias o="xdg-open" # o stands for open
