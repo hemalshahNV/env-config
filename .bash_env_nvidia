@@ -1,0 +1,2 @@
+export PATH=$PATH:/snap/bin:~/.local/bin:~/workspaces/docker-workspace
+
