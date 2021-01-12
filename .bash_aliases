@@ -13,7 +13,7 @@ alias o="xdg-open" # o stands for open
 
 export TERM=xterm-256color
 export EDITOR=vim
-export DISPLAY=:1
+export DISPLAY=:0
 
 gg() { git grep "$1"; }
 hgr() { history | grep "$1"; }
@@ -43,5 +43,3 @@ for f in $BASH_ENVS; do
     source "$f"
   fi
 done
-
-
