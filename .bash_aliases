@@ -7,16 +7,27 @@ alias gst='git status'
 alias gl='git log'
 alias gbc='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d'
 alias glg='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias gA='git add -A'
+alias gd='git diff'
+alias gC='git commit'
+
+# Docker aliases
+alias dcls='docker container ls'
 
 # Convenience aliases
 alias o="xdg-open" # o stands for open
 
+# Utilities
+alias dud='du -sk * | sort -rn | head'
+
 export TERM=xterm-256color
 export EDITOR=vim
-export DISPLAY=:0
+export DISPLAY=:1
 
 gg() { git grep "$1"; }
 hgr() { history | grep "$1"; }
+md5dir() { find "$1" -type f -not -path ".git" -not -path "*/__pycache__/*" -exec md5sum {} \; | sort -k 2 | md5sum ; }
+ff() { find ./ -name "$1" 2>&1 | grep -v "Permission denied"; }
 
 # Show current Git branch on bash prompt
 # Requires git bash completion to be setup.
@@ -43,3 +54,4 @@ for f in $BASH_ENVS; do
     source "$f"
   fi
 done
+alias osmo="/home/hemals/workspaces/osmo/osmo/osmo"
