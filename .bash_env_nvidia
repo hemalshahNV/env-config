@@ -1,3 +1,10 @@
 export PATH=$PATH:/snap/bin:~/.local/bin:~/workspaces/docker-workspace
 alias vm03="ssh hemals-vm-03.nvidia.com -t tmux new-session -A -s screen0"
 
+alias vm05="ssh hemals-vm-05.nvidia.com -t tmux new-session -A -s screen0"
+alias vm04="ssh hemals-vm-04.nvidia.com -t tmux new-session -A -s screen0"
+alias vm03="ssh hemals-vm-03.nvidia.com -t tmux new-session -A -s screen0"
+alias vm02="ssh hemals-vm-02.nvidia.com -t tmux new-session -A -s screen0"
+alias vm01="ssh hemals-vm-01.nvidia.com -t tmux new-session -A -s screen0"
+
+export DISPLAY=:0
