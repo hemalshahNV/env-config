@@ -10,4 +10,5 @@ alias ipp="ssh ipp -t tmux new-session -A -s screen0"
 alias ipp2="ssh ipp2 -t tmux new-session -A -s ipp2"
 alias ipp3="ssh ipp3 -t tmux new-session -A -s ipp3"
 alias ipp4="ssh ipp4 -t tmux new-session -A -s ipp4"
+
 export DISPLAY=:0
