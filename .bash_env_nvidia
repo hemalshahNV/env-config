@@ -1,14 +1,19 @@
 export PATH=$PATH:/snap/bin:~/.local/bin:~/workspaces/docker-workspace
 
+alias vm06="ssh hemals-vm-06.nvidia.com -t tmux new-session -A -s screen0"
 alias vm05="ssh hemals-vm-05.nvidia.com -t tmux new-session -A -s screen0"
 alias vm04="ssh hemals-vm-04.nvidia.com -t tmux new-session -A -s screen0"
 alias vm03="ssh hemals-vm-03.nvidia.com -t tmux new-session -A -s screen0"
 alias vm02="ssh hemals-vm-02.nvidia.com -t tmux new-session -A -s screen0"
 alias vm01="ssh hemals-vm-01.nvidia.com -t tmux new-session -A -s screen0"
 
-alias ipp="ssh ipp -t tmux new-session -A -s screen0"
-alias ipp2="ssh ipp2 -t tmux new-session -A -s ipp2"
-alias ipp3="ssh ipp3 -t tmux new-session -A -s ipp3"
-alias ipp4="ssh ipp4 -t tmux new-session -A -s ipp4"
+alias ipp1="ssh -X ipp1 -t tmux new-session -A -s ipp1"
+alias ipp2="ssh -X ipp2 -t tmux new-session -A -s ipp2"
+alias ipp3="ssh -X ipp3 -t tmux new-session -A -s ipp3"
+alias ipp4="ssh -X ipp4 -t tmux new-session -A -s ipp4"
+
+alias orin01="ssh -X orin01 -t tmux new-session -A -s orin01"
+alias orin02="ssh -X orin02 -t tmux new-session -A -s orin02"
+alias orin03="ssh -X orin03 -t tmux new-session -A -s orin03"
 
 export DISPLAY=:0
