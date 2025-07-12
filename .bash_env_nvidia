@@ -19,5 +19,6 @@ alias orin03="ssh -X orin03 -t tmux new-session -A -s orin03"
 alias horde1="ssh -X horde1 -t tmux new-session -A -s horde1"
 
 alias carter_v24_b8="ssh -A nvidia@carter-v24-b8 -t tmux new-session -A -s carter-v24-b8"
+alias carter_v24_b5="ssh -A nvidia@carter-v24-b5 -t tmux new-session -A -s carter-v24-b5"
 export DISPLAY=:0
 

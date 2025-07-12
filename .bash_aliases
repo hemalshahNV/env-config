@@ -55,3 +55,4 @@ for f in $BASH_ENVS; do
   fi
 done
 alias osmo="/home/hemals/workspaces/osmo/osmo/osmo"
+export PATH="/opt/homebrew/bin:$PATH"
